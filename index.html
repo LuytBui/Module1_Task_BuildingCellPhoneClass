@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cellPhone {
+            border: 1px solid black;
+            width:400px;
+        }
+
+        .alignRight {
+            text-align: right;
+        }
+
+        .monitor {
+            text-align: left;
+            border: 1px solid black;
+            height: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+
+        #batery1 {
+            font-size: 80%;
+            text-align: right;
+        }
+
+        button {
+            width: 84px;
+            height: 28px;
+        }
+
+        strong {
+            font-size: 120%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="cellPhone1"></div>
+<br>
+<div id="cellPhone2"></div>
+
+
+<script src="cellPhone.js"></script>
+<script src="controller.js"></script>
+<script>
+    let cellPhone1 = new CellPhone('Nokia','123');
+    console.log(cellPhone1);
+    cellPhone1.power();
+    let cellPhone2 = new CellPhone('Iphone', '456');
+
+    setInterval(refresh,1000);
+    function refresh(){
+        displayHTML(cellPhone1,'cellPhone1');
+        displayHTML(cellPhone2,'cellPhone2');
+    }
+</script>
+
+</body>
+</html>
